@@ -12,9 +12,9 @@ namespace CalculatorWindowsForm
 {
     public partial class Form1 : Form
     {
-        int num1;
-        int num2;
-        int sum;
+        double num1;
+        double num2;
+        double sum;
         int choice;
 
         public Form1()
@@ -75,7 +75,7 @@ namespace CalculatorWindowsForm
         private void btnAddition_Click(object sender, EventArgs e)
         {
             //txtInputField.AppendText("+");
-            num1 = Convert.ToInt32(txtInputField.Text);
+            num1 = Convert.ToDouble(txtInputField.Text);
             choice = 1;
             txtInputField.Clear();
         }
@@ -83,7 +83,7 @@ namespace CalculatorWindowsForm
         private void btnSubtraction_Click(object sender, EventArgs e)
         {
             //txtInputField.AppendText("-");
-            num1 = Convert.ToInt32(txtInputField.Text);
+            num1 = Convert.ToDouble(txtInputField.Text);
             choice = 2;
             txtInputField.Clear();
         }
@@ -92,7 +92,7 @@ namespace CalculatorWindowsForm
         {
             //txtInputField.AppendText("*");
             choice = 3;
-            num1 = Convert.ToInt32(txtInputField.Text);
+            num1 = Convert.ToDouble(txtInputField.Text);
             txtInputField.Clear();
         }
 
@@ -100,13 +100,13 @@ namespace CalculatorWindowsForm
         {
             //txtInputField.AppendText("/");
             choice = 4;
-            num1 = Convert.ToInt32(txtInputField.Text);
+            num1 = Convert.ToDouble(txtInputField.Text);
             txtInputField.Clear();
         }
 
         private void btnSum_Click(object sender, EventArgs e)
         {
-            num2 = Convert.ToInt32(txtInputField.Text);
+            num2 = Convert.ToDouble(txtInputField.Text);
             
             switch (choice)
             {
@@ -123,7 +123,7 @@ namespace CalculatorWindowsForm
                     sum = num1 / num2;
                     break;
             }
-            txtInputField.Text = sum.ToString();
+            txtInputField.Text = sum.ToString();            
         }
 
         private void btnReset_Click(object sender, EventArgs e)
